@@ -245,7 +245,7 @@
 			"11"
 			{	
 				"var_type"					"FIELD_INTEGER"
-				"initial_charges"			"16"
+				"initial_charges"			"20"
 			}
 			"12"
 			{
@@ -258,7 +258,7 @@
 		{
 			"RunScript"
 			{
-				"ScriptFile"				"components/items/item_bloodstone.lua"
+				"ScriptFile"				"vscripts/bloodstone.lua"
 				"Function"					"Suicide"
 			}
 		}
@@ -281,7 +281,7 @@
 			}
 			"RunScript"
 			{
-				"ScriptFile"				"components/items/item_bloodstone.lua"
+				"ScriptFile"				"vscripts/bloodstone.lua"
 				"Function"					"RespawnTimeReset"
 			}
 		}
@@ -308,7 +308,7 @@
 				{
 					"RunScript"
 					{
-						"ScriptFile"	"components/items/item_bloodstone.lua"
+						"ScriptFile"	"vscripts/bloodstone.lua"
 						"Function"		"SetCharges"
 					}
 				}
@@ -370,7 +370,7 @@
 				{
 					"RunScript"
 					{
-						"ScriptFile"		"components/items/item_bloodstone.lua"
+						"ScriptFile"		"vscripts/bloodstone.lua"
 						"Function"			"UpdateCharges"
 
 						"charges_modifier"	"modifier_item_imba_bloodstone_charges"
@@ -421,7 +421,7 @@
 
 					"RunScript"
 					{
-						"ScriptFile"		"components/items/item_bloodstone.lua"
+						"ScriptFile"		"vscripts/bloodstone.lua"
 						"Function"			"LoseCharges"
 
 						"exp_modifier"		"modifier_item_imba_bloodstone_exp_counter"
@@ -441,7 +441,7 @@
 				{
 					"RunScript"
 					{
-						"ScriptFile"		"components/items/item_bloodstone.lua"
+						"ScriptFile"		"vscripts/bloodstone.lua"
 						"Function"			"GainChargesOnAssist"
 					}
 				}
