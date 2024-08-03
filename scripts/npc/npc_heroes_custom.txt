@@ -1,0 +1,37 @@
+// Dota Heroes File
+// NOTE: This is not for creating new heroes, this is for taking a currently existing hero as a template and overriding
+// the specified key-value combinations.  Use override_hero <hero_to_override> for this.
+"DOTAHeroes"
+{
+	//=================================================================================================================
+	// HERO: Tinker
+	//=================================================================================================================
+	"npc_dota_hero_tinker"
+	{
+		"override_hero"				"npc_dota_hero_tinker"			// Hero to override
+		"Ability1"					"tinker_laser"		
+		"Ability2"					"tinker_heat_seeking_missile"
+		"Ability3"					"tinker_march_of_the_machines"
+		"Ability4"					"tinker_defense_matrix"
+		"Ability5"					"tinker_warp_grenade"
+		"Ability6"					"tinker_rearm"
+        "Ability7"                  ""
+	}
+    "npc_dota_hero_broodmother"
+    {
+        "override_hero"             "npc_dota_hero_broodmother"
+        "Ability1"				"broodmother_spawn_spiderlings"
+		"Ability2"				"broodmother_spin_web"
+		"Ability3"				"broodmother_incapacitating_bite"
+		"Ability6"				"broodmother_insatiable_hunger"
+    }
+    "npc_dota_hero_techies"
+    {
+        "override_hero"             "npc_dota_hero_techies"
+        "Ability1"                  "techies_land_mines"
+        "Ability2"                  "techies_stasis_trap"
+        "Ability4"                 "techies_focused_detonate"
+        "Ability6"                  "techies_remote_mines"            
+    }
+    
+}

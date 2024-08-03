@@ -1,0 +1,1418 @@
+"DOTAAbilities"
+{
+    "Version"       "1"
+	
+	//=================================================================================================================
+	// Tinker: Defense Matrix ( shard ability )
+	//=================================================================================================================
+	"tinker_defense_matrix"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		
+		"FightRecapLevel"				"1"
+		"IsGrantedByShard"				"1"
+		"MaxLevel"						"1"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"800"
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"damage_absorb"
+			{
+				"value"							"300"
+			}
+			"barrier_duration"		"15"
+
+			"flicker_range"
+			{
+				"value"											"0"
+				"special_bonus_facet_tinker_translocator"	"0"
+			}
+			"flicker_angle"							"90"
+		}
+	}
+
+	//=================================================================================================================
+	// Tinker: Keen Teleport (Keen Conveyance)
+	//=================================================================================================================
+	"tinker_keen_teleport"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+
+		// NOTE: AbilityBehavior is defined in code
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_DONT_CANCEL_CHANNEL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_BUILDING"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCooldown"				"80.0"
+		"AbilityCastPoint"				"0.0"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"75"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"minimun_distance"		"70"
+			"maximum_distance"		"800"
+			"vision_radius"
+			{
+				"value"						"200"
+				"affected_by_aoe_increase"	"1"
+			}
+			"AbilityChannelTime"
+			{
+				"value"							"3.0"
+				"special_bonus_unique_tinker_5" "-0.5"
+			}
+			"channel_time_tooltip"
+			{
+				"value"							"3.0"
+				"special_bonus_unique_tinker_5" "-0.5"
+			}
+			"additional_starting_cooldown"		"20.0"	// set this to the same value as the additional CD in GrantFreeTPScrolls
+			"creep_teleport_level"				"2"
+			"hero_teleport_level"				"3"
+
+			"outpost_channel_time"			// TELEPORT_OUTPOST_CHANNEL_TIME
+			{
+				"value"							"6.0"
+				"special_bonus_unique_tinker_5" "-0.5"
+			}
+			"jungle_outpost_channel_time"		// TELEPORT_JUNGLE_OUTPOST_CHANNEL_TIME
+			{
+				"value"							"4.0"
+				"special_bonus_unique_tinker_5" "-0.5"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Tinker Innate: Item CDR
+	//=================================================================================================================
+	"tinker_eureka"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"Innate"						"0"
+		"MaxLevel"						"1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"int_per_one_cdr"				"0"
+			"one_percent_tooltip"			"0"
+			"max_cdr"						"0"
+		}
+	}
+
+	//=================================================================================================================
+	// Tinker: Innate Keen Teleport - Gold on Death (instead of TP)
+	//=================================================================================================================
+	"tinker_innate_keen_teleport_gold_on_death"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
+		"MaxLevel"						"1"
+		"AbilityValues"
+		{
+			"gold_on_death"			"50"
+		}
+	}
+
+	//=================================================================================================================
+	// Tinker: Innate Keen Teleport - XP on Death (instead of TP)
+	//=================================================================================================================
+	"tinker_innate_keen_teleport_xp_on_death"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
+		"MaxLevel"						"1"
+		"AbilityValues"
+		{
+			"xp_on_death"			"50"
+		}
+	}	
+
+	//=================================================================================================================
+	// Tinker: Laser
+	//=================================================================================================================
+	"tinker_laser"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"HasScepterUpgrade"			    "1"
+		"AbilitySound"					"Hero_Tinker.Laser"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"800"
+		"AbilityCastPoint"				"0.4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"19 18 17 16"
+
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"95 105 115 125"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.3"	// Primarily about the damageo
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"miss_rate"				"100"
+				"duration"			
+				{	
+					"value"			"3.0 3.5 4.0 4.5"
+				}
+				"laser_damage"			
+				{
+					"value" "75 150 225 300"
+				"special_bonus_unique_tinker" "+80"
+				}
+                "AbilityCastRange"
+                {
+                    "value" "800"
+                    "special_bonus_unique_tinker_laser_cast_range"	"150"
+                }
+				"radius_explosion"
+				{
+					"value"			"0"
+					"special_bonus_unique_tinker_4"	"+0"
+					"affected_by_aoe_increase"	"0"
+				}
+				"splash_pct"		"0"
+				"scepter_bonus_cast_range"		
+				{
+					"value"		"250"
+					"RequiresScepter"				"1"
+				}
+                "scepter_reduction_pct"		
+				{
+					"value"		"0"
+					"RequiresScepter"				"1"
+				}						
+				"scepter_bounce_radius"		
+				{
+					"value"			"0"
+					"affected_by_aoe_increase"	"0"
+					"RequiresScepter"				"1"
+				}	
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	
+	
+	//=================================================================================================================
+	// Tinker: Heat Seeking Missile
+	//=================================================================================================================
+	"tinker_heat_seeking_missile"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_FOW_VISIBLE | DOTA_UNIT_TARGET_FLAG_NO_INVIS | DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Tinker.Heat-Seeking_Missile"
+        "HasScepterUpgrade"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0 0 0 0"
+		"AbilityCastRange"				"2500"
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"18"
+
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"105 115 125 135"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{ 
+				"damage"			"120 200 280 360"
+				"radius"			
+				{
+					"value"	"2500"
+					"affected_by_aoe_increase"	"1"
+				}
+				"targets"			
+				{
+					"value"	"2 2 2 2"
+                    "special_bonus_scepter"     "4 4 4 4"
+                    
+				}
+
+                "scepter_bonus_targets"
+                {
+                    "targets" "4 4 4 4"
+                    "RequiresScepter"				"1"
+                }
+
+				"speed"				"700"
+				"radius_explosion"				"0"
+				"splash_pct"		"0"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+    //=================================================================================================================
+	// Tinker: Shrink Ray (scepter ability)
+	//=================================================================================================================
+	"tinker_shrink_ray"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+
+		"AbilitySound"					"Hero_Tinker.Laser"
+		"MaxLevel"						"1"
+		"IsGrantedByScepter"			"1"
+		"HasScepterUpgrade"				"1"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0"
+
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0"	// Primarily about the damageo
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+		"AbilityValues"
+		{
+			"scale_reduction"
+			{
+				"value" "0"
+			}
+			"health_reduction"
+			{
+				"value" "0"
+			}
+			"slow"
+			{
+				"value" "0"
+			}
+			"duration"
+			{
+				"value" "0"
+			}
+			"max_stacks"
+			{
+				"value" "0"
+			}
+			"radius_explosion"
+			{
+				"value" "0"
+				"affected_by_aoe_increase"	"0"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Tinker: March of the Machines
+	//=================================================================================================================
+	"tinker_march_of_the_machines"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilitySound"					"Hero_Tinker.March_of_the_Machines"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"300"
+		"AbilityCastPoint"				"0.53"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"35.0 33.0 31.0 29.0"
+
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"90 110 130 150"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"radius"				
+			{
+				"value"		"900"
+				"affected_by_aoe_increase"	"1"
+			}
+			"collision_radius"		"50"
+			"splash_radius"			"150"
+			"duration"
+			{
+				"value"											"6.0"
+				"special_bonus_unique_tinker_march_duration"	"+1.0"
+			}
+			"speed"					"400"
+			"machines_per_sec"		"24"
+			"distance"				"1800"
+			"damage"				"17 26 35 44"
+			
+			"heal_per_second"
+			{
+				"value"									"0"
+				"special_bonus_facet_tinker_repair_bots"	"+0 +0 +0 +0"
+			}
+
+			"heal_duration"
+			{
+				"value"									"0"
+				"special_bonus_facet_tinker_repair_bots"	"+0 +0 +0 +0"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
+	//=================================================================================================================
+	// Tinker: Rearm
+	//=================================================================================================================
+	"tinker_rearm"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilitySound"					"Hero_Tinker.Rearm"
+
+		"HasShardUpgrade"	"1"
+		"AbilityDraftUltShardAbility"		"tinker_matrix"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.53"		
+		"AbilityChannelTime"				"2 1.25 0.75"		
+		"AbilityCastAnimation"		"ACT_DOTA_CHANNEL_ABILITY_4"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0 0 0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 150 200"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"magic_resistance"
+			{
+				"value"													"0"
+				"special_bonus_unique_tinker_rearm_magic_resistance"	"+0"
+			}
+			"armor_duration"
+			{
+				"value"													"0"
+				"special_bonus_unique_tinker_rearm_magic_resistance"	"+0"
+			}
+			"affects_items"
+			{
+				"value"									"1"
+			}
+		}
+	}
+	
+	//=================================================================================================================
+	// Tinker: Warp Grenade ( shard ability )
+	//=================================================================================================================
+	"tinker_warp_grenade"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"MaxLevel"						"0"
+		"FightRecapLevel"				"0"
+		"IsGrantedByShard"				"0"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1"
+		"AbilityCastPoint"				"0"
+		"AbilityCastAnimation"			""
+		
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"9999999999"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"999999999"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"damage"					"0"
+				"knockback_distance"
+				{
+					"value"		"0"
+					"affected_by_aoe_increase"	"0"
+				}
+				"range_reduction"		"0"
+				"debuff_duration"		"0"
+		}
+	}
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_tinker"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass" "special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_tinker_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_tinker_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass" "special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_tinker_laser_cast_range"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityValues"
+		{
+			"value"
+			{
+				"value" "150"
+				"ad_linked_abilities" "tinker_laser"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_tinker_rearm_magic_resistance"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_tinker_march_duration"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_tinker_defense_matrix_status_resistance"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
+
+
+
+	//=================================================================================================================
+	// Broodmother: Spawn Spiderlings
+	//=================================================================================================================
+	"broodmother_spawn_spiderlings"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"FightRecapLevel"				"1"
+        "RequiredLevel"                 "1"
+        "MaxLevel"                      "4"
+        "LevelsBetweenUpgrades"         "2"
+		"AbilitySound"					"Hero_Broodmother.SpawnSpiderlingsImpact"
+
+
+		// Unit Targeting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"900"
+		"AbilityCastPoint"				"0.2 0.2 0.2 0.2"
+		"AbilityCooldown"				"10"
+		"AbilityManaCost"				"100"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.0"	// Modifier has no support value
+			
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"buff_duration"			"20"
+				"spiderling_duration"	"40"
+				"damage"				
+				{
+					"value"				"75 150 225 300"
+					"special_bonus_unique_broodmother_3" "+80"
+				}
+				"damage_bonus"	"0 2 4 6"
+				"hp_bonus"
+				{
+					"value"				"0"
+					"special_bonus_unique_broodmother_7" "+125"
+				}
+				"count"					
+				{
+					"value"		"1 2 3 4"
+				}
+				"projectile_speed"	"1200"
+				"tooltip_spiderling_hp"
+				{
+					"value"				"300"
+					"special_bonus_unique_broodmother_7" "+125"
+				}
+				"slow_duration"	
+				{
+					"value"		"2"
+				}
+				"movement_speed" "15 25 35 45"
+
+					
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	//=================================================================================================================
+	// Broodmother: Poison Sting
+	//=================================================================================================================
+	"broodmother_poison_sting"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportBonus"		"15"
+			
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"movement_speed"		"-6 -8 -10"
+			"duration_hero"			"2.0"
+			"duration"				"6.0"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	//=================================================================================================================
+	// Broodmother: Spawn Spiderites
+	//=================================================================================================================
+	"broodmother_spawn_spiderite"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+			
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"spiderite_duration"			"40.0"
+			"buff_duration"					"2.0"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+	//=================================================================================================================
+	// Broodmother: Spin Web
+	//=================================================================================================================
+	"broodmother_spin_web"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"AbilitySound"					"Hero_Broodmother.SpinWebCast"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1200"
+		"AbilityCastPoint"				"0.4"
+		"AbilityCooldown"				"0.0"
+		"AbilityManaCost"				"40"
+		"AbilityCharges"				"4 6 8 10"
+		"MaxLevel"						"4"
+			
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"radius"				
+			{
+				"value"		"1200"
+				"affected_by_aoe_increase"	"1"
+			}
+			"count"					
+			{
+				"value"				"3 5 7 9"
+				"special_bonus_unique_broodmother_6" "+3"
+			}
+			"health_regen"
+			{
+				"value"				"0"
+			}
+			"bonus_movespeed"		"10 22 34 46"
+			"AbilityChargeRestoreTime"	
+			{
+				"value"				"27"
+				"special_bonus_unique_broodmother_5" "-7"
+			}
+
+			"bonus_turn_rate"	"0.2"
+			"degen"
+			{
+				"special_bonus_facet_broodmother_necrotic_webs"	"=15 =20 =25 =30"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+
+	"broodmother_spiders_milk"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI"
+		"MaxLevel"						"1"
+		"Innate"						"1"
+		"AbilityValues"
+		{
+			"kill_heal_heroes"						"2"
+			"kill_creeps_penalty"						"40"
+			"kill_heal_aoe"							
+			{
+				"value"			"600"
+				"affected_by_aoe_increase"	"1"
+			}
+			"kill_heal_duration"					"3"
+			"tick_rate"								"0.5"
+
+		}
+	
+	}
+
+	//=================================================================================================================
+	// Broodmother: Silken Bola
+	//=================================================================================================================
+	"broodmother_silken_bola"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"750"
+		"AbilityCastPoint"				"0.1"
+		
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"24 20 16 12"
+
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"70 75 80 85"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.3"	// Primarily about the damageo
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"movement_speed"			
+			{
+					"value"		"10 25 40 55"
+			}
+			"aoe"
+			{
+				"value"	"0"				
+				"affected_by_aoe_increase"	"1"
+			}
+			"duration"				
+			{
+				"value"		"6 6 6 6"
+			}
+			"roots"
+			{
+				"value"	"0"
+			}
+			"projectile_speed"	"1200"
+			"impact_damage"			
+			{
+					"value"				"90 120 150 180"
+			}
+			"attack_damage"			
+			{
+					"value"				"6 7 8 9"
+			}
+			"miss_chance"			
+			{
+				"value"		"40 45 50 55"
+			}
+			
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	//=================================================================================================================
+	// Broodmother: Incapacitating Bite
+	//=================================================================================================================
+	"broodmother_incapacitating_bite"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+        
+        
+			
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"miss_chance"			
+			{
+				"value"		"30 40 50 60"
+				"special_bonus_unique_broodmother_4"	"+30"
+			}
+			"bonus_movespeed"		
+			{
+				"value"		"-15 -20 -25 -30"
+				"special_bonus_unique_broodmother_4"	"-30"
+			}
+			"duration"				"2.0 2.0 2.0 2.0"
+			"attack_damage"			
+			{
+				"value"				"2 4 6 8"					
+				"special_bonus_unique_broodmother_2"	"+10"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+	
+	//=================================================================================================================
+	// Broodmother: Insatiable Hunger
+	//=================================================================================================================
+	"broodmother_insatiable_hunger"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+        "AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityDraftUltScepterAbility"		"broodmother_sticky_snare"
+		"FightRecapLevel"				"2"
+        "HasShardUpgrade"               "1"
+
+        "RequiredLevel"                 "6"
+        "MaxLevel"                      "3"
+        "LevelBetweenUpgrades"          "6"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.2 0.2 0.2"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+
+		"AbilityCooldown"				"45 45 45"
+		"AbilityManaCost"				"100"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_damage"			
+			{
+				"value"					"60 90 120"
+				"CalculateSpellDamageTooltip"	"0"
+			}
+			"lifesteal_pct"			
+			{
+				"value"				"60 80 100"
+			}
+			"creep_lifesteal_reduction_pct"		"40"
+			"duration"				
+			{
+				"value"		"14 14 14"
+				"special_bonus_shard"	"+2"
+			}
+			"bat_bonus"				
+			{
+				"value"				"0"
+				"special_bonus_unique_broodmother_1" "+0.3"
+			}
+			"shard_damage_per_tick"
+			{
+				"value"						"0"
+				"special_bonus_shard"		"+4"
+			}
+			"shard_damage_tick_interval"
+			{
+					"value"				"1"
+					"RequiresShard"		"1"
+			}
+			"aura_radius"		
+			{
+				"value"				"0"
+				"special_bonus_facet_broodmother_feeding_frenzy"					"=800"
+				"affected_by_aoe_increase"	"1"
+			}
+			
+					
+		}
+	}
+	
+	//=================================================================================================================
+	// Broodmother: 
+	//=================================================================================================================
+	"broodmother_sticky_snare"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_VECTOR_TARGETING | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES | DOTA_ABILITY_BEHAVIOR_CHANNELLED "
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"FightRecapLevel"				"1"
+		"MaxLevel"						"1"
+		"HasScepterUpgrade"				"1"
+		"IsGrantedByScepter"			"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCharges"				"2"
+		"AbilityChargeRestoreTime"		"30"		
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"formation_delay"		"2.0"
+			"root_duration"			"3.0"
+			"damage_per_second"	
+			{
+				"value"			"100"
+				"CalculateSpellDamageTooltip" "1"
+			}
+			"count"					"5"
+			"width"					
+			{
+				"value"		"900"
+				"affected_by_aoe_increase"	"1"
+			}
+			
+		}
+	}
+
+	//=================================================================================================================
+	// Broodmother: Spin Web Destroy
+	//=================================================================================================================
+	"broodmother_spin_web_destroy"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"MaxLevel"						"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0"
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_broodmother_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"broodmother_insatiable_hunger"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+		
+		
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_broodmother_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"broodmother_silken_bola"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+		
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_broodmother_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"broodmother_spawn_spiderlings"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_broodmother_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"broodmother_silken_bola"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_broodmother_5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"broodmother_spin_web"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+		
+		
+	}
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_broodmother_6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ad_linked_abilities"			"broodmother_spin_web"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+		"BaseClass"						"special_bonus_base"				
+	}
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_unique_broodmother_7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"				
+	}
+    "techies_stasis_trap"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5600"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN | DOTA_ABILITY_BEHAVIOR_AOE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"150"
+		"AbilityCastPoint"				"1.0"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20.0 16.0 13.0 10.0"
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"80 110 140 160"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{		
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"activation_radius"			"450"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"explode_delay"			"1.5"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"stun_radius"				"450"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"stun_duration"				"2.5 3 3.5 4"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"activation_time"			"1.5"
+			}	
+			"06"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"fade_time"					"2.0"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"360.0"
+			}
+		}
+	}
+    "techies_remote_mines"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_6"
+
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"HasScepterUpgrade"				"1"
+		"AbilityDraftPreAbility"		"techies_focused_detonate"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"500"
+		"AbilityCastPoint"				"0.75"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"8"
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"120 180 240"
+		"AbilityValues"
+		{
+			"max_mines"
+			{
+				"value" "21"
+			}
+			"damage"
+			{
+				"value" "300 450 600"
+			}
+			"radius"
+			{
+				"value" "425"
+			}
+			"duration"
+			{
+				"value" "600"
+			}
+			"activation_time"
+			{
+				"value" "2"
+			}
+			"damage_scepter"
+			{
+				"value" "450 600 750"
+				"RequiresScepter" "1"
+			}
+			"radius_scepter"
+			{
+				"value" "425"
+				"RequiresScepter" "1"
+			}
+			"cast_range_scepter_bonus"
+			{
+				"value" "300"
+				"RequiresScepter" "1"
+			}
+			"vision_radius"
+			{
+				"value" "500"
+			}
+			"vision_duration"
+			{
+				"value" "3"
+			}
+			"model_scale"
+			{
+				"value" "0 10 20"
+			}
+			"detonate_delay"
+			{
+				"value" "0.25"
+			}
+		}
+	}
+
+    "techies_suicide"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1000"
+		"AbilityCastPoint"				"1.0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"40 35 30 25"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 125 150 175"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"radius"				
+			{
+				"value"		"400"
+				"affected_by_aoe_increase"	"1"	
+			}
+			"damage"
+			{
+				"value"			"200 300 400 500"
+				"special_bonus_unique_techies" "+200"
+			}
+			"stun_duration"				"0.8 1 1.2 1.4"
+			"hp_cost"			
+			{
+				"value" 			"20"
+			}
+			
+			"hp_dmg"
+			{
+				"value"				"0"
+				"special_bonus_facet_techies_spleens_secret_sauce" "=15"
+			}
+			"duration"				"0.75"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+	
+	//=================================================================================================================
+	// Ability: Focused Detonate
+	//=================================================================================================================
+	"techies_focused_detonate"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_UNRESTRICTED | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		
+		"AbilityCastRange"				"0"
+		"AbilityCastAnimation"			"ACT_INVALID"
+
+		"MaxLevel"				"1"
+		"AbilityCooldown"				"1.0 1.0 1.0"
+		"AbilityValues"
+		{
+			"radius"
+			{
+				"value" "700"
+			}
+		}
+	}
+	//=================================================================================================================
+	// Ability: Remote Mine Self Detonate
+	//=================================================================================================================
+	"techies_remote_mines_self_detonate"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		
+		"AbilityCastRange"				"0"
+		"MaxLevel"						"1"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+		"AbilityValues"
+		{
+			"radius"
+			{
+				"value" "400 410 425"
+			}
+		}
+	}
+}

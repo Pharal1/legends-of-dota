@@ -1,0 +1,11 @@
+"CustomHeroList"
+{
+	
+	"npc_dota_hero_tinker"			"1"
+    "npc_dota_hero_axe"             "1"
+    "npc_dota_hero_nevermore"       "1"
+    "npc_dota_hero_broodmother"     "1"
+    "npc_dota_hero_techies"         "1"
+    "npc_dota_hero_hoodwink"        "1"
+	
+}

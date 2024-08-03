@@ -1,0 +1,451 @@
+"DOTAAbilities"
+{
+    "item_arcane_blink"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_OVERSHOOT"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1200"			// If updating this, update AbilityOvershootCastRange to 4/5 of this value
+		"AbilityOvershootCastRange"     "960"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"15.0"
+		"AbilityManaCost"				"0"
+		"AbilitySharedCooldown"			"blink"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"6800"
+		"ItemShopTags"					"teleport"
+		"ItemQuality"					"component"
+		"ItemAliases"					"blink dagger"
+		//"SideShop"						"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"blink_range"			"1200"
+				"blink_damage_cooldown"	"0.0"
+				"blink_range_clamp"		"960"
+				"duration"		        "6"
+		}
+	}
+
+    "item_swift_blink"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_OVERSHOOT"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1200"			// If updating this, update AbilityOvershootCastRange to 4/5 of this value
+		"AbilityOvershootCastRange"     "960"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"15.0"
+		"AbilityManaCost"				"0"
+		"AbilitySharedCooldown"			"blink"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"6800"
+		"ItemShopTags"					"teleport"
+		"ItemQuality"					"component"
+		"ItemAliases"					"blink dagger"
+		//"SideShop"						"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"blink_range"			"1200"
+				"blink_damage_cooldown"	"3.0"
+				"blink_range_clamp"		"960"
+				"bonus_agility"		    "25"
+				"bonus_movement"		"40"
+				"bonus_agi_active"		"35"
+                "cast_speed_pct"      "1000"
+				"duration"		        "6"
+		}
+	}
+
+    "item_blink"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_OVERSHOOT"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1200"			// If updating this, update AbilityOvershootCastRange to 4/5 of this value
+		"AbilityOvershootCastRange"     "960"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"15.0"
+		"AbilityManaCost"				"0"
+		"AbilitySharedCooldown"			"blink"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"2250"
+		"ItemShopTags"					"teleport"
+		"ItemQuality"					"component"
+		"ItemAliases"					"blink dagger"
+		//"SideShop"						"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"blink_range"			"1200"
+			"blink_damage_cooldown"	"0.0"
+			"blink_range_clamp"		"960"
+		}
+	}
+
+    item_arcane_blink2
+    {
+        "ID"                            "1500" // anything above 1250 should be safe to use.
+        "BaseClass"                     "item_arcane_blink"
+        "ScriptFile"                    "vscripts/arcane_blink.lua"
+        "AbilityTextureName"            "item_arcane_blink"
+        "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_OVERSHOOT"
+
+        "AbilityCastRange"				"1200"
+		"AbilityOvershootCastRange"     "960"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"15.0"
+		"AbilityManaCost"				"0"
+		"AbilitySharedCooldown"			"blink"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"6800"
+		"ItemShopTags"					"teleport"
+		"ItemQuality"					"component"
+		"ItemAliases"					"blink dagger"
+		//"SideShop"						"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"blink_range"			"1200"
+				"blink_damage_cooldown"	"0.0"
+				"blink_range_clamp"		"960"
+                "MODIFIER_PROPERTY_CASTTIME_PERCENTAGE" "20000"
+                "bonus_cast_range"      "200"
+				"duration"		        "6"
+		}
+	}
+
+    "item_imba_bloodstone"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1501"
+		"BaseClass"						"item_bloodstone"
+		"AbilityTextureName" 			"item_bloodstone"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+        "ScriptFile"                    "vscripts/bloodstone.lua"
+		"FightRecapLevel"				"2"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"200"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"240.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"4900"
+		"ItemShopTags"					"regen_health;regen_mana;mana_pool;health_pool"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"bs;bloodstone"
+		//"ItemInitialCharges"			"16"
+		"ItemDisplayCharges"			"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_health"				"625"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_mana"				"625"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"bonus_mana_regen"			"4.5"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"effect_radius"				"1675"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"heal_on_death_base"		"500"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"heal_on_death_per_charge"	"30"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"respawn_time_reduction"	"3.0"
+			}
+			"08"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"on_death_loss"				"0.66" //33% gone
+			}
+			"09"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"mana_regen_per_charge"		"0.5"
+			}
+			"09"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"bonus_health_regen"		"8.0"
+			}
+			"09"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_mana_regen_pct"		"200"
+			}
+			"10"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_mana_regen_mult"		"2"					//Take the above value and divide by 100
+			}
+			"11"
+			{	
+				"var_type"					"FIELD_INTEGER"
+				"initial_charges"			"16"
+			}
+			"12"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"health_regen_per_charge"	"0.3"
+			}
+		}
+
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"				"components/items/item_bloodstone.lua"
+				"Function"					"Suicide"
+			}
+		}
+
+		"OnEquip"
+		{
+			"ApplyModifier"
+			{
+				"ModifierName"				"modifier_item_imba_bloodstone_charges"
+				"Target" 					"CASTER"
+			}
+		}
+
+		"OnUnequip"
+		{
+			"RemoveModifier"
+			{
+				"ModifierName"				"modifier_item_imba_bloodstone_charges"
+				"Target" 					"CASTER"
+			}
+			"RunScript"
+			{
+				"ScriptFile"				"components/items/item_bloodstone.lua"
+				"Function"					"RespawnTimeReset"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_item_imba_bloodstone"
+			{
+				"Passive"					"1"
+				"IsHidden"					"1"
+				"IsDebuff"					"0"
+
+				"Attributes"				"MODIFIER_ATTRIBUTE_MULTIPLE | MODIFIER_ATTRIBUTE_PERMANENT"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_HEALTH_BONUS" 					"%bonus_health"
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"			"%bonus_health_regen"
+					"MODIFIER_PROPERTY_MANA_BONUS" 						"%bonus_mana"
+					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT" 			"%bonus_mana_regen"
+				}
+				
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"components/items/item_bloodstone.lua"
+						"Function"		"SetCharges"
+					}
+				}
+			}
+			
+			"modifier_item_imba_bloodstone_mana_regen_pct"
+			{
+				"Passive"					"1"
+				"IsHidden"					"1"
+				"IsDebuff"					"0"
+
+				"Attributes"				"MODIFIER_ATTRIBUTE_PERMANENT"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MANA_REGEN_TOTAL_PERCENTAGE"		"%bonus_mana_regen_mult"
+				}
+			}
+
+			"modifier_item_imba_bloodstone_charges"
+			{
+				"Passive"					"0"
+				"IsHidden"					"1"
+				"IsDebuff"					"0"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"			"%health_regen_per_charge"
+					"MODIFIER_PROPERTY_BASE_MANA_REGEN"					"%mana_regen_per_charge"
+				}
+			}
+
+			"modifier_item_imba_bloodstone_charge_changer"
+			{
+				"Passive"					"1"
+				"IsHidden"					"1"
+				"IsDebuff"					"0"
+
+				"Aura"          			"modifier_item_imba_bloodstone_assist_detector"
+				"Aura_Radius"   			"%effect_radius"
+				"Aura_Teams"    			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+				"Aura_Types"    			"DOTA_UNIT_TARGET_HERO"
+				"Aura_Flags"    			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+
+				"ThinkInterval"  			"0.1"
+
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"		"internal/util.lua"
+						"Function"			"IllusionPassiveRemover"
+
+						"modifier"			"modifier_item_imba_bloodstone_charge_changer"
+					}
+				}
+
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"		"components/items/item_bloodstone.lua"
+						"Function"			"UpdateCharges"
+
+						"charges_modifier"	"modifier_item_imba_bloodstone_charges"
+					}
+				}
+
+				"OnHeroKilled"
+				{
+					"RunScript"
+					{
+						"ScriptFile"		"components/items/item_bloodstone.lua"
+						"Function"			"GainChargesOnKill"
+
+						"assist_modifier"	"modifier_item_imba_bloodstone_assist_detector"
+					}
+				}
+
+				"OnDeath"
+				{
+					// Particles stay forever and cause massive lag (not confirmed)
+//					"FireEffect"
+//					{
+//						"EffectName"        "particles/items_fx/bloodstone_glyph.vpcf"
+//						"EffectAttachType"  "start_at_customorigin"
+
+//						"Target"
+//						{
+//							"Center"		"CASTER"
+//							"Teams"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+//							"Types"			"DOTA_UNIT_TARGET_HERO"
+//							"Flags"			"DOTA_UNIT_TARGET_FLAG_DEAD"
+//						}
+//					}
+
+//					"FireEffect"
+//					{
+//						"EffectName"        "particles/items_fx/bloodstone_heal.vpcf"
+//						"EffectAttachType"  "follow_origin"
+
+//						"Target"
+//						{
+//							"Center"		"CASTER"
+//							"Teams"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+//							"Radius"		"%effect_radius"
+//							"Types"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+//						}
+//					}
+
+					"RunScript"
+					{
+						"ScriptFile"		"components/items/item_bloodstone.lua"
+						"Function"			"LoseCharges"
+
+						"exp_modifier"		"modifier_item_imba_bloodstone_exp_counter"
+					}
+				}
+			}
+
+			"modifier_item_imba_bloodstone_assist_detector"
+			{
+				"IsHidden"					"1"
+				"IsDebuff"					"1"
+				"IsPurgable"				"0"
+
+				"Attributes"				"MODIFIER_ATTRIBUTE_MULTIPLE"
+
+				"OnDeath"
+				{
+					"RunScript"
+					{
+						"ScriptFile"		"components/items/item_bloodstone.lua"
+						"Function"			"GainChargesOnAssist"
+					}
+				}
+			}
+		}
+	}
+}
