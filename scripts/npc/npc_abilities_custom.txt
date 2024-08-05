@@ -194,12 +194,12 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"19 18 17 16"
+		"AbilityCooldown"				"146"
 
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"95 105 115 125"
+		"AbilityManaCost"				"95 120 145 170"
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -216,13 +216,13 @@
 				}
 				"laser_damage"			
 				{
-					"value" "75 150 225 300"
-				"special_bonus_unique_tinker" "+80"
+					"value" "80 160 240 320"
+				    "special_bonus_unique_tinker" "+80"
 				}
                 "AbilityCastRange"
                 {
                     "value" "800"
-                    "special_bonus_unique_tinker_laser_cast_range"	"150"
+                    "special_bonus_unique_tinker_laser_cast_range"	"950"
                 }
 				"radius_explosion"
 				{
@@ -239,12 +239,12 @@
                 "scepter_reduction_pct"		
 				{
 					"value"		"0"
-					"RequiresScepter"				"1"
+					"RequiresScepter"				"0"
 				}						
 				"scepter_bounce_radius"		
 				{
-					"value"			"0"
-					"affected_by_aoe_increase"	"0"
+					"value"			"400"
+					"affected_by_aoe_increase"	"1"
 					"RequiresScepter"				"1"
 				}	
 		}
@@ -280,13 +280,13 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"105 115 125 135"
+		"AbilityManaCost"				"120 140 160 180"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{ 
-				"damage"			"120 200 280 360"
+				"damage"			"100 270 250 325"
 				"radius"			
 				{
 					"value"	"2500"
@@ -373,8 +373,8 @@
 			}
 			"radius_explosion"
 			{
-				"value" "0"
-				"affected_by_aoe_increase"	"0"
+				"value" "400"
+				"affected_by_aoe_increase"	"1"
 			}
 		}
 	}
@@ -398,7 +398,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"35.0 33.0 31.0 29.0"
+		"AbilityCooldown"				"35"
 
 		// Damage.
 		//-------------------------------------------------------------------------------------------------------------
@@ -406,7 +406,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"90 110 130 150"
+		"AbilityManaCost"				"145 150 165 190"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -427,7 +427,7 @@
 			"speed"					"400"
 			"machines_per_sec"		"24"
 			"distance"				"1800"
-			"damage"				"17 26 35 44"
+			"damage"				"16 24 32 40"
 			
 			"heal_per_second"
 			{
@@ -461,7 +461,7 @@
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastPoint"				"0.53"		
-		"AbilityChannelTime"				"2 1.25 0.75"		
+		"AbilityChannelTime"				"3 2 1"		
 		"AbilityCastAnimation"		"ACT_DOTA_CHANNEL_ABILITY_4"
 		
 		// Time		
@@ -470,7 +470,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"100 150 200"
+		"AbilityManaCost"				"150 250 350"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -1242,7 +1242,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
-		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_6"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
 
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
