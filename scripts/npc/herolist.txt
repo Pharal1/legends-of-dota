@@ -8,5 +8,8 @@
     "npc_dota_hero_techies"         "1"
     "npc_dota_hero_hoodwink"        "1"
     "npc_dota_hero_antimage"        "1"
+    "npc_dota_hero_jugernout"       "1"
+    "npc_dota_hero_nyx"             "1"
+    "npc_dota_pudge"                "1
 	
 }

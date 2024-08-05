@@ -5,25 +5,33 @@ if GameMode == nil then
 end
 
 function Precache( context )
-	--[[
+	
+    print("something")
+    
+    --[[
 		Precache things we know we'll use.  Possible file types include (but not limited to):
 			PrecacheResource( "model", "*.vmdl", context )
 			PrecacheResource( "soundfile", "*.vsndevts", context )
 			PrecacheResource( "particle", "*.vpcf", context )
 			PrecacheResource( "particle_folder", "particles/folder", context )
 	]]
+    
 end
 
 -- Create the game mode when we activate
-function Activate()
-	GameRules.AddonTemplate = GameMode()
-	GameRules.AddonTemplate:InitGameMode()
+function Activate ()
+	GameRules.GameMode = GameMode()
+	GameRules.GameMode:InitGameMode()
+    
+    GameRules:SetGoldPerTick(0.5)
 end
 
 function GameMode:InitGameMode()
-	print( "Template addon is loaded." )
+    GameRules:GetGameModeEntity():SetFreeCourierModeEnabled( true )
+    print( "Template addon is loaded." )
     ListenToGameEvent('entity_hurt', Dynamic_Wrap(self, 'OnEntityHurt'), self)
     ListenToGameEvent('dota_ability_channel_finished', Dynamic_Wrap(GameMode, 'OnAbilityCast'), GameMode)
+    --ListenToGameEvent('dota_game_state_change', Dynamic_Wrap(GameMode 'OnStateChanged', GameMode))
 	GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 2 )
 end
 
@@ -51,10 +59,25 @@ function GameMode:OnEntityHurt(data)
             if (attaked:FindItemInInventory('item_blink') ~= nil) then
                 local blink_item = attaked:FindItemInInventory('item_blink')
                 blinkKD(blink_item)
-            elseif (attaked:FindItemInInventory('item_arcane_blink2') ~= nil) then
-                local blink_item = attaked:FindItemInInventory('item_arcane_blink2')
+            elseif (attaked:FindItemInInventory('item_arcane_blink') ~= nil) then
+                local blink_item = attaked:FindItemInInventory('item_arcane_blink')
+                blinkKD(blink_item)
+            elseif (attaked:FindItemInInventory('item_owerwhelming_blink') ~= nil) then
+                local blink_item = attaked:FindItemInInventory('item_owerwhelming_blink')
+                blinkKD(blink_item)
+            elseif (attaked:FindItemInInventory('item_swift_blink') ~= nil) then
+                local blink_item = attaked:FindItemInInventory('item_swift_blink')
                 blinkKD(blink_item)
             end
         end
     end
+end
+
+function GameMode:OnAbilityCast(data)
+    printTable(data)
+end
+
+function GameMode:OnStateChanged(data)
+    local players = Entities:FindAllByClassname('dota_player_controller')
+    CheckForCourierSpawning(players)
 end

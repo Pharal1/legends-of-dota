@@ -3,9 +3,9 @@
 	HideInTools = false
 	IsPlayable = true
 	IsTemplate = false
-	maps = null
+	maps = "dota22"
 	CheckAFKPlayers = false
-	DefaultMap = "dota22.vmap"
+	DefaultMap = "dota22"
 	Default_Keys = null
 	DisableIK = false
 	EnablePickRules = false

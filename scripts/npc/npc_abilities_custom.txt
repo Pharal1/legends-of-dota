@@ -194,7 +194,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"146"
+		"AbilityCooldown"				"14"
 
 
 		// Cost
@@ -1192,7 +1192,7 @@
 	
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"80 110 140 160"
+		"AbilityManaCost"				"80 110 140 170"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -1216,7 +1216,7 @@
 			"04"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"stun_duration"				"2.5 3 3.5 4"
+				"stun_duration"				"3 4 5 6"
 			}
 			"05"
 			{
@@ -1256,11 +1256,11 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"8"
+		"AbilityCooldown"				"10"
 	
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"120 180 240"
+		"AbilityManaCost"				"200 240 300"
 		"AbilityValues"
 		{
 			"max_mines"
@@ -1335,7 +1335,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"40 35 30 25"
+		"AbilityCooldown"				"180 179 160 150"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -1352,19 +1352,19 @@
 			}
 			"damage"
 			{
-				"value"			"200 300 400 500"
+				"value"			"650 850 1150 1550"
 				"special_bonus_unique_techies" "+200"
 			}
-			"stun_duration"				"0.8 1 1.2 1.4"
+			"stun_duration"				"0"
 			"hp_cost"			
 			{
-				"value" 			"20"
+				"value" 			"100"
 			}
 			
 			"hp_dmg"
 			{
 				"value"				"0"
-				"special_bonus_facet_techies_spleens_secret_sauce" "=15"
+				"special_bonus_facet_techies_spleens_secret_sauce" "0"
 			}
 			"duration"				"0.75"
 		}
@@ -1415,4 +1415,71 @@
 			}
 		}
 	}
-}
+	"techies_land_mines"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityDraftPreAbility"		"techies_minefield_sign"
+
+        "RequiredLevel"                 "1"
+        "MaxLevel"                      "4"
+        "LevelsBetweenUpgrades"         "2"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"400"
+		"AbilityCastPoint"				"0.0"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0"
+		"AbilityCharges"				"1"
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"125 150 175 205"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"radius"				
+				{
+					"value"	"500"
+					"affected_by_aoe_increase"	"1"	
+
+				}
+				"proximity_threshold"				"1.0"
+				"damage"					
+				{
+					"value"			"300 400 500 600"
+				}
+				"building_damage_pct"		"30"
+				"activation_delay"			
+				{
+					"value"		"1"
+					"special_bonus_unique_techies_4"	"-0.8"
+				}
+				"cast_range_scepter_bonus"		
+				{
+					"value"		"300"
+					"RequiresScepter"			"1"
+				}
+				"AbilityChargeRestoreTime"
+				{
+					"value"		"25 20 15 20"
+					"special_bonus_unique_techies_3"	"-3"
+				}
+				"outer_damage"				"0"
+				"min_distance"				"150"
+				"placement_radius"			"350"
+				"mres_reduction"			"20"
+				"burn_duration"				"5"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+}  

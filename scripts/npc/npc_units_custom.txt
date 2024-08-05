@@ -11,6 +11,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/creeps/neutral_creeps/n_creep_gnoll/n_creep_gnoll_frost.vmdl"	// Model.
+        //vpk:C:\Program Files (x86)\Steam\steamapps\common\dota 2 beta\game\dota\pak01.vpk:models\creeps\neutral_creeps\n_creep_gnoll\n_creep_gnoll_frost.vmdl_c
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"n_creep_Ranged"
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
@@ -93,5 +94,10 @@
     "npc_dota_hero_tinker_new"
     {
         
+    }
+    "npc_dota_techies_remote_mine"
+    {
+        "model"                         "models/items/techies/techies_ti9_immortal_remote_mine/techies_ti9_immortal_remote_mine.vmdl"
+        "model_scale"                   "1"
     }
 }
