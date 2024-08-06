@@ -68,7 +68,7 @@ end
 
 
 function GameMode:OnGameInProgress()
-	GameRules:SetTimeOfDay(0.251)
+	GameRules:SetTimeOfDay(0.5)
 end
 
 -- Evaluate the state of the game

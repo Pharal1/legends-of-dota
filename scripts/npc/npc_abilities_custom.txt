@@ -1532,8 +1532,25 @@
 				"var_type"					"FIELD_FLOAT"
 				"jump_continue_delay"		"0.5"
 			}
-		}			
-	} 
+		}
+
+        "special_bonus_unique_techies_5"
+	    {
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityValues"
+		{
+			"value"
+			{
+				"value" "15"
+				"ad_linked_abilities" "techies_suicide"
+			}
+		}
+	}
+
+
 
 
 
