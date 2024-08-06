@@ -2,7 +2,7 @@ if GameMode == nil then
 	GameMode = class({})
 end
 
-require addon_game_mode
+require("addon_game_mode")
 
 if item_arcane_blink2 == nil then
     item_arcane_blink2 = class({})
