@@ -16,6 +16,12 @@
 		"Ability5"					"tinker_warp_grenade"
 		"Ability6"					"tinker_rearm"
         "Ability7"                  ""
+        "AttributeStrengthGain"        "2.5"            // Strength bonus per level.
+        "AttributeBaseAgility"         "13"            // Base agility
+        "AttributeAgilityGain"         "1.2"            // Agility bonus per level.
+        "AttackDamageMin"			"24"		// Damage range min.
+		"AttackDamageMax"			"30"
+        "StatusHealthRegen"           "0"
 	}
     "npc_dota_hero_broodmother"
     {
@@ -32,13 +38,31 @@
         "Ability2"                  "techies_stasis_trap"
         "Ability3"                  "techies_suicide"
         "Ability4"                  "techies_focused_detonate"
-        "Ability6"                  "techies_remote_mines"     
+        "Ability6"                  "techies_remote_mines" 
+
+        "AttributePrimary"             "DOTA_ATTRIBUTE_INTELLECT"
+        "AttackDamageMin"			"9"		// Damage range min.
+		"AttackDamageMax"			"11"		// Damage range max.
+        "AttackRate"                "1.7"
+        "MovementSpeed"				"320"
+        //"AttributeBaseStrength"        "0"            // Base strength
+        //"AttributeStrengthGain"        "0"            // Strength bonus per level.
+        //"AttributeBaseAgility"         "0"            // Base agility
+        //"AttributeAgilityGain"         "0"            // Agility bonus per level.
+        //"AttributeBaseIntelligence"    "0"            // Base intelligence
+        "AttributeIntelligenceGain"    "3.3"
+        "ArmorPhysical"                "5"
     }
     "npc_dota_hero_riki"
     {
         "override_hero"             "npc_dota_hero_riki"
-        "ability1"                  "riki_backstab"
-        "ability2"                  "riki_smoke_screen"
-        "ability6"                  "riki_blink_strike"
+        "Ability1"                  "riki_backstab"
+        "Ability2"                  "riki_smoke_screen"
+        "Ability6"                  "riki_blink_strike"
+    }
+    "npc_dota_hero_nevermore"
+    {
+        "override_hero"             "npc_dota_hero_nevermore"
+        "Ability4"                  "nevermore_necromastery" 
     }
 }

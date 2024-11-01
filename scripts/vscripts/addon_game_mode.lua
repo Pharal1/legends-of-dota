@@ -80,7 +80,7 @@ function GameMode:OnThink()
 	end
 	return 1
 end
-function GameMode:OnAbilityUsed( data )
+--[[function GameMode:OnAbilityUsed( data )
     print("1")
     if (data.abilityname == 'techies_suicide') then
         print("2")
@@ -102,7 +102,7 @@ function GameMode:OnAbilityUsed( data )
         end
     end
 end
-
+]]--
 function blinkKD(blink_item)
     if (blink_item:GetCooldownTimeRemaining() <= 3) then
         blink_item:EndCooldown()
