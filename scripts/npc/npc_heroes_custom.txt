@@ -16,6 +16,7 @@
 		"Ability5"					"tinker_warp_grenade"
 		"Ability6"					"tinker_rearm"
         "Ability7"                  ""
+        "Ability9"                  "special_bonus_unique_tinker"
         "AttributeStrengthGain"        "2.5"            // Strength bonus per level.
         "AttributeBaseAgility"         "13"            // Base agility
         "AttributeAgilityGain"         "1.2"            // Agility bonus per level.
