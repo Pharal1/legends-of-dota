@@ -189,7 +189,7 @@
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"800"
+		"AbilityCastRange"				"600"
 		"AbilityCastPoint"				"0.4"
 
 		// Time		
@@ -221,8 +221,7 @@
 				}
                 "AbilityCastRange"
                 {
-                    "value" "800"
-                    "special_bonus_unique_tinker_laser_cast_range"	"950"
+                    "value" "600"
                 }
 				"radius_explosion"
 				{
@@ -233,7 +232,7 @@
 				"splash_pct"		"0"
 				"scepter_bonus_cast_range"		
 				{
-					"value"		"250"
+					"value"		"200"
 					"RequiresScepter"				"1"
 				}
                 "scepter_reduction_pct"		
@@ -543,6 +542,13 @@
 		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"BaseClass" "special_bonus_base"
+        "Modifiers"
+        {
+            "Properties"
+            {
+                "MODIFIER_PROPERTY_CAST_RANGE_BONUS"    "250"
+            }
+        }
 	}
 
 	//=================================================================================================================
